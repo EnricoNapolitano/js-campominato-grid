@@ -12,7 +12,5 @@ const playButton = document.getElementById('play-button');
 //* Generating a div with class cell
 let cell = '';
 // Cycle to Render 100 cells 
-for (let i = 1; i <= 100; i++) {
-cell += '<div class="cell"></div>';
-}
+for (let i = 1; i <= 100; i++) cell += '<div class="cell"></div>';
 console.log(cell);
