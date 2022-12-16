@@ -1,6 +1,67 @@
-/* Reset */
+/** Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
+
+
+/** Generics */
+body {
+    background-color: crimson;
+}
+button {
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/** Utils */
+.container {
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+
+/** Header */
+header {
+    height: 120px;
+    background-color: white;
+
+    margin-bottom: 80px;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#game-title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+header img {
+    width: 100px;
+    padding-bottom: 25px;
+}
+
+
+/** Grid */
+#grid {
+    width: 1200px;
+    height: 1200px;
+    border: 1px solid white;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid white;
+}
+
