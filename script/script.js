@@ -10,6 +10,8 @@ const cellsGenerator = () => {
     for (let i = 1; i <= 100; i++) cell += '<div class="cell"></div>';
     return console.log(cell);
 }
+const printCells = () => grid.innerHTML = cell;
+
 
 //* DOM's elemens
 const grid = document.getElementById('grid');
@@ -19,7 +21,10 @@ const h2 = document.querySelector('h2');
 //* Generating a div with class cell
 let cell = '';
 
+
+//* Play button event
 playButton.addEventListener('click', function(){
     const removeCTA = h2.classList.add('d-none');
     cellsGenerator();
+    printCells();
 })

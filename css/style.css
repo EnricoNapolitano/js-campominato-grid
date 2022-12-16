@@ -36,6 +36,9 @@ button {
 .d-none {
     display: none;
 }
+.cell.clicked {
+    background-color: #28a745;
+}
 
 
 /** Header */
@@ -65,7 +68,6 @@ header img {
 #grid {
     width: 1200px;
     height: 1200px;
-    border: 1px solid white;
 
     display: flex;
     flex-wrap: wrap;
