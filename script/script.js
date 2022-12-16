@@ -14,10 +14,12 @@ const cellsGenerator = () => {
 //* DOM's elemens
 const grid = document.getElementById('grid');
 const playButton = document.getElementById('play-button');
+const h2 = document.querySelector('h2');
 
 //* Generating a div with class cell
 let cell = '';
 
 playButton.addEventListener('click', function(){
+    const removeCTA = h2.classList.add('d-none');
     cellsGenerator();
 })
