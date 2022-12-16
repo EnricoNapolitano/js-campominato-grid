@@ -3,13 +3,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Fredoka One', cursive;
 }
 
 
 /** Generics */
 body {
     background-color: crimson;
+}
+h1 {
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+h2 {
+    color: white;
+    font-size: 125px;
 }
 button {
     padding: 10px 30px;
@@ -24,6 +32,9 @@ button {
 .container {
     margin: 0px auto;
     max-width: 1200px;
+}
+.d-none {
+    display: none;
 }
 
 
