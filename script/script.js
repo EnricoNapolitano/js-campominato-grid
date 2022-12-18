@@ -5,26 +5,35 @@ Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 */
 
-//* Functions
-const cellsGenerator = () => {
-    for (let i = 1; i <= 100; i++) cell += '<div class="cell"></div>';
-    return console.log(cell);
+//* FUNCTIONS
+const cellGenerator = (number) => {
+    const cell = document.createElement('div');
+    cell.append(number);
+    cell.classList.add('cell');
+    return cell;
 }
-const printCells = () => grid.innerHTML = cell;
 
-
-//* DOM's elemens
-const grid = document.getElementById('grid');
-const playButton = document.getElementById('play-button');
-const h2 = document.querySelector('h2');
-
-//* Generating a div with class cell
-let cell = '';
+//* DOM'S ELEMENTS
+const gridElement = document.getElementById('grid');
+const playButtonElement = document.getElementById('play-button');
+const h2Element = document.querySelector('h2');
 
 
 //* Play button event
-playButton.addEventListener('click', function(){
-    const removeCTA = h2.classList.add('d-none');
-    cellsGenerator();
-    printCells();
+playButtonElement.addEventListener('click', function(){
+
+    const removeCTA = h2Element.classList.add('d-none'); // remove Call To Action
+    
+    for (let i=1; i <= 100; i++){
+
+        const cell = cellGenerator(i); // create the cells
+
+        cell.addEventListener('click', function(){ // coloring cells by click
+            cell.classList.add('clicked');
+            const message = `hai cliccato la casella n° ${i}`
+            console.log(message);
+        })
+
+        gridElement.appendChild(cell); // rendering cells on page
+    }
 })

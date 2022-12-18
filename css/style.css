@@ -30,7 +30,7 @@ button {
 
 /** Utils */
 .container {
-    margin: 0px auto;
+    margin: 0 auto;
     max-width: 1200px;
 }
 .d-none {
@@ -45,8 +45,6 @@ button {
 header {
     height: 120px;
     background-color: white;
-
-    margin-bottom: 80px;
 }
 header .container {
     display: flex;
@@ -66,8 +64,9 @@ header img {
 
 /** Grid */
 #grid {
-    width: 1200px;
-    height: 1200px;
+    margin: 50px auto;
+    width: 720px;
+    height: 720px;
 
     display: flex;
     flex-wrap: wrap;
@@ -76,5 +75,10 @@ header img {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid white;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
