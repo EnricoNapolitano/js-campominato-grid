@@ -19,8 +19,10 @@ const playButtonElement = document.getElementById('play-button');
 const h2Element = document.querySelector('h2');
 
 
-//* Play button event
+//* PLAY BUTTON EVENT
 playButtonElement.addEventListener('click', function(){
+
+    playButtonElement.disabled = true; // needed to not generate new grids by clicking on button again
 
     const removeCTA = h2Element.classList.add('d-none'); // remove Call To Action
     
